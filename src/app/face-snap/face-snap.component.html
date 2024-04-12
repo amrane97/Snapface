@@ -1,0 +1,10 @@
+<div class="card-snap">
+<p>{{faceSnap.title | uppercase}}</p>
+<p>{{faceSnap.description}}</p>
+<p>{{faceSnap.createdDate | date: 'le dd/MM/yyyy'}}</p>
+<p>{{faceSnap.snaps | number : '2.2-2'}}</p>
+methode 1 : <img src="{{faceSnap.imageUrl}}">
+methode 2 :<img [src]="faceSnap.imageUrl">
+
+<button class="mybutton" (click)="onAddSnap()" [ngClass]="{buttonGreen : faceSnap.isClicked}"> {{buttonText}}</button>
+</div>
